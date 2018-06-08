@@ -1,7 +1,9 @@
 package au.id.sblackman.roomtest1;
 
 import android.arch.persistence.room.Room;
+import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -29,6 +31,8 @@ public class CreateUser extends AppCompatActivity {
         email = findViewById(R.id.email);
         button = findViewById(R.id.button);
 
+
+
         final AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "Production")
                 // TODO sblackman 20/05/2018
                 .allowMainThreadQueries()
@@ -44,4 +48,6 @@ public class CreateUser extends AppCompatActivity {
             }
         });
     }
+
+
 }
